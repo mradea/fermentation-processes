@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy_integrate import solve_ivp
+from scipy.integrate import solve_ivp
 
 # defining some parameters for batch fermentation process with product production but without maintenance metabolism
 # S0: substrate concentration in reactor at t = 0 [g/L]
@@ -57,5 +57,5 @@ plt.plot(sol.t,sol.y[1])
 plt.plot(sol.t,sol.y[2])
 plt.xlabel('Duration [h]')
 plt.ylabel('Concentration [g/L]')
-plt.legend(['Cell concentration','Product concentration', 'Substrate concentration']
+plt.legend(['Cell concentration','Product concentration', 'Substrate concentration'])
 plt.show()
