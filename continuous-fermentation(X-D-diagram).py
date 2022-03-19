@@ -30,7 +30,7 @@ D = np.arange(0,mumax,0.001)
 X = Yxs*(Sf-((D*Ks)/(mumax-D)))
 # since the substrate concentration cannot be higher than Sf, use np.minimum to set it to Sf if it exceeds this value
 S = np.minimum((D*Ks)/(mumax-D),Sf)
-P = Yps*(Sf-((D*Kp)/(qpmax-qD)))
+P = Yps*(Sf-((D*Kp)/(qpmax-D)))
 STY = P*D
 
 fig, ax1 = plt.subplots()
