@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 
+# fermentation time [h]:
+fermentation_time = 50
+
 # defining some parameters for batch fermentation process with product production but without maintenance metabolism
 # S0: substrate concentration in reactor at t = 0 [g/L]
 # X0: incoulation biomass [g/L]
@@ -47,8 +50,8 @@ y0 = [X0,0,S0]
 
 # t = duration of fermentation 
 # t_span has to be defined for solve_ivp
-t = np.arange(0,50,0.01)
-t_span = (0.0,50.0)
+t = np.arange(0,fermentation_time,0.01)
+t_span = (0.0,fermentation_time)
 
 # solving ODEs and plotting concentration of X and S using solve_ivp from scipy
 sol = solve_ivp(ODE_batch,t_span,y0,t_eval=t)
