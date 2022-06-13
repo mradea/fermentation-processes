@@ -80,7 +80,7 @@ for mut_rate in rates:
             threshold_reached.append(th)
             break
             
-if len(t_cheater) == len(rates):
+if len(threshold_reached) == len(rates):
     # prevents the case that threshold is not reached for every mutation rate
     plt.plot(rates, threshold_reached)
     plt.xlabel('Mutation rate [1/h]')
